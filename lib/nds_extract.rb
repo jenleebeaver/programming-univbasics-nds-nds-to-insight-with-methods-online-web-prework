@@ -30,11 +30,12 @@ end
 def gross_for_director(director_data)
     #pp director_data
 
-    result = {}
+    result = []
     movie_index = 0
 
     while movie_index < director_data[:movies].length do
-      result['a'] +=  director_data[:movies][movie_index][:worldwide_gross]
+      total_gross = director_data[:movies][movie_index][:worldwide_gross]
+      result.push(total_gross) +=  director_data[:movies][movie_index][:worldwide_gross]
       movie_index += 1
     end
     puts result
